@@ -1,0 +1,76 @@
+GET http://localhost:3001/api/persons
+
+###
+
+DELETE http://localhost:3001/api/persons/62a5b7fdf763305316e3121c
+
+###
+
+// valid number format
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "testing",
+    "number": "040-22334455"
+}
+
+###
+
+// valid number format
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "testing",
+    "number": "09-1234556"
+}
+
+###
+
+// invalid number format
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "testing",
+    "number": "1234556"
+}
+
+###
+
+// invalid number format
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "testing",
+    "number": "1-22334455"
+}
+
+###
+
+// invalid number format
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "testing",
+    "number": "10-22-334455"
+}
+
+###
+
+GET http://localhost:3001/api/persons/1
+
+###
+
+PUT http://localhost:3001/api/persons/62a5b5e017b5438f6792cdaa
+
+Content-Type: application/json
+
+{
+    "name": "Test test",
+    "number": "1234599"
+}
+
